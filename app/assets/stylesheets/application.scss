@@ -2,7 +2,8 @@
 *= require_self
 *= require_tree .
 */
-
+@import 'slick';
+@import 'slick-theme';
 html, body { height: 100%; }
 body { padding: 0px; margin: 0px; background-color: rgb(225,225,225); }
 body, input { font-family: Arial; font-size: 13pt; }
@@ -86,3 +87,20 @@ span.field_with_errors input, span.field_with_errors textarea { background-color
 .highlight { display: inline-block; margin: -7px 0 -7px 0; padding-left: 14px; background-color: #BA303A; border-radius: 15px; }
 .highlight span { display: inline-block; height: 27px; padding: 7px 14px 0 0; }
 .highlight a { text-decoration: none; color: #FFF; outline: none; }
+
+
+.scroller {
+  div {
+    text-align: center;
+    font-size: 30px;
+  }
+}
+.slick-prev::before, .slick-next::before {
+  color: #000;
+}
+.slick-next {
+  right: -5px;
+}
+.slick-prev {
+  left: -5px;
+}

@@ -1,4 +1,5 @@
 //= require jquery
+//= require jquery.slick
 //= require jquery_ujs
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl

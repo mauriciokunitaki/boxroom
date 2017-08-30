@@ -1,0 +1,5 @@
+<div class="fade">
+  <% @pdfimages.each do |page| %>
+    <div><%= image_tag "data:image/jpeg;base64,#{page}" %></div>
+  <% end %>
+</div>

@@ -15,7 +15,7 @@ jQuery ->
           data.context.find('.exists_message').show()
           $('#user_file_attachment').prop('disabled', false)
         else
-          data.submit()          
+          data.submit()
     progress: (e, data) ->
       if data.context
         progress = parseInt(data.loaded / data.total * 100)
@@ -26,3 +26,12 @@ jQuery ->
     stop: (e) ->
       folder = $('#target_folder_id').val()
       window.location.href = "/folders/#{folder}"
+      
+jQuery(document).ready ->
+  $('.fade').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+  });

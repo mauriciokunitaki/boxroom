@@ -2,7 +2,8 @@ Boxroom::Application.routes.draw do
   get '/file_exists', :to => 'files#exists'
   get '/signin', :to => 'sessions#new', :as => 'signin'
   delete '/signout', :to => 'sessions#destroy'
-
+  #route to convertfile method
+  get '/showpdfasimage/:id', to: 'files#showpdfasimage', :as => 'showpdfasimage'
   # Resources
   resources :admins, :only => [:new, :create]
   resources :sessions, :only => [:new, :create, :destroy]

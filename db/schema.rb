@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20130628082245) do
 
   create_table "folders", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "groups", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 20130628082245) do
   end
 
   create_table "share_links", force: :cascade do |t|
-    t.string   "emails",          limit: 255
-    t.string   "link_token",      limit: 255
+    t.string   "emails"
+    t.string   "link_token"
     t.datetime "link_expires_at"
     t.integer  "user_file_id"
     t.datetime "created_at"
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 20130628082245) do
   end
 
   create_table "user_files", force: :cascade do |t|
-    t.string   "attachment_file_name",    limit: 255
-    t.string   "attachment_content_type", limit: 255
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
     t.integer  "folder_id"
@@ -62,17 +62,17 @@ ActiveRecord::Schema.define(version: 20130628082245) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",                            limit: 255
-    t.string   "email",                           limit: 255
-    t.string   "hashed_password",                 limit: 255
-    t.string   "password_salt",                   limit: 255
-    t.boolean  "is_admin",                        limit: 255
-    t.string   "remember_token",                  limit: 255
-    t.string   "reset_password_token",            limit: 255
+    t.string   "name"
+    t.string   "email"
+    t.string   "hashed_password"
+    t.string   "password_salt"
+    t.boolean  "is_admin"
+    t.string   "remember_token"
+    t.string   "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "signup_token",                    limit: 255
+    t.string   "signup_token"
     t.datetime "signup_token_expires_at"
   end
 
